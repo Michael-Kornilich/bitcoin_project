@@ -12,10 +12,10 @@ The resulting table should look something like this:
 Phase 1 */
 create table if not exists bitcoin_ohlc (
 	ts timestamp primary key,
-	open real,
-	high real,
-	low real,
-	close real
+	open double precision,
+	high double precision,
+	low double precision,
+	close double precision
 )
 with (
 	timescaledb.hypertable,
@@ -27,10 +27,10 @@ tablespace "external";
 
 create table if not exists nasdaq_ohlc (
 	ts timestamp primary key,
-	open real,
-	high real,
-	low real,
-	close real
+	open double precision,
+	high double precision,
+	low double precision,
+	close double precision
 )
 with (
 	timescaledb.hypertable,
@@ -42,10 +42,10 @@ tablespace "external";
 
 create table if not exists snp_ohlc (
 	ts timestamp primary key,
-	open real,
-	high real,
-	low real,
-	close real
+	open double precision,
+	high double precision,
+	low double precision,
+	close double precision
 )
 with (
 	timescaledb.hypertable,
@@ -57,10 +57,10 @@ tablespace "external";
 
 create table if not exists dow_jones_ohlc (
 	ts timestamp primary key,
-	open real,
-	high real,
-	low real,
-	close real
+	open double precision,
+	high double precision,
+	low double precision,
+	close double precision
 )
 with (
 	timescaledb.hypertable,
@@ -72,10 +72,10 @@ tablespace "external";
 
 create table if not exists oil_ohlc (
 	dt date primary key,
-	open real,
-	high real,
-	low real,
-	close real
+	open double precision,
+	high double precision,
+	low double precision,
+	close double precision
 )
 with (
 	timescaledb.hypertable,
@@ -87,10 +87,10 @@ tablespace "external";
 
 create table if not exists gold_ohlc (
 	dt date primary key,
-	open real,
-	high real,
-	low real,
-	close real
+	open double precision,
+	high double precision,
+	low double precision,
+	close double precision
 )
 with (
 	timescaledb.hypertable,
@@ -102,7 +102,7 @@ tablespace "external";
 
 create table if not exists cpi (
 	dt date primary key,
-	value real
+	value double precision
 )
 with (
 	timescaledb.hypertable,
@@ -115,8 +115,8 @@ tablespace "external";
 /* Phase 2*/
 create table if not exists bitcoin_trading_metadata (
 	dt date primary key,
-	outstanding_supply real constraint valid_outstanding_supply check (outstanding_supply is null or outstanding_supply > 0),
-	trading_volume real constraint valid_trading_volume check (trading_volume is null or trading_volume > 0)
+	outstanding_supply double precision constraint valid_outstanding_supply check (outstanding_supply is null or outstanding_supply > 0),
+	trading_volume double precision constraint valid_trading_volume check (trading_volume is null or trading_volume > 0)
 )
 with (
 	timescaledb.hypertable,
@@ -128,8 +128,8 @@ tablespace "external";
 
 create table if not exists snp_trading_metadata (
 	dt date primary key,
-	outstanding_supply real constraint valid_outstanding_supply check (outstanding_supply is null or outstanding_supply > 0),
-	trading_volume real constraint valid_trading_volume check (trading_volume is null or trading_volume > 0)
+	outstanding_supply double precision constraint valid_outstanding_supply check (outstanding_supply is null or outstanding_supply > 0),
+	trading_volume double precision constraint valid_trading_volume check (trading_volume is null or trading_volume > 0)
 )
 with (
 	timescaledb.hypertable,
@@ -141,8 +141,8 @@ tablespace "external";
 
 create table if not exists nasdaq_trading_metadata (
 	dt date primary key,
-	outstanding_supply real constraint valid_outstanding_supply check (outstanding_supply is null or outstanding_supply > 0),
-	trading_volume real constraint valid_trading_volume check (trading_volume is null or trading_volume > 0)
+	outstanding_supply double precision constraint valid_outstanding_supply check (outstanding_supply is null or outstanding_supply > 0),
+	trading_volume double precision constraint valid_trading_volume check (trading_volume is null or trading_volume > 0)
 )
 with (
 	timescaledb.hypertable,
@@ -154,8 +154,8 @@ tablespace "external";
 
 create table if not exists dow_jones_trading_metadata (
 	dt date primary key,
-	outstanding_supply real constraint valid_outstanding_supply check (outstanding_supply is null or outstanding_supply > 0),
-	trading_volume real constraint valid_trading_volume check (trading_volume is null or trading_volume > 0)
+	outstanding_supply double precision constraint valid_outstanding_supply check (outstanding_supply is null or outstanding_supply > 0),
+	trading_volume double precision constraint valid_trading_volume check (trading_volume is null or trading_volume > 0)
 )
 with (
 	timescaledb.hypertable,
@@ -167,8 +167,8 @@ tablespace "external";
 
 create table if not exists oil_trading_metadata (
 	dt date primary key,
-	outstanding_supply real constraint valid_outstanding_supply check (outstanding_supply is null or outstanding_supply > 0),
-	trading_volume real constraint valid_trading_volume check (trading_volume is null or trading_volume > 0)
+	outstanding_supply double precision constraint valid_outstanding_supply check (outstanding_supply is null or outstanding_supply > 0),
+	trading_volume double precision constraint valid_trading_volume check (trading_volume is null or trading_volume > 0)
 )
 with (
 	timescaledb.hypertable,
@@ -180,8 +180,8 @@ tablespace "external";
 
 create table if not exists gold_trading_metadata (
 	dt date primary key,
-	outstanding_supply real constraint valid_outstanding_supply check (outstanding_supply is null or outstanding_supply > 0),
-	trading_volume real constraint valid_trading_volume check (trading_volume is null or trading_volume > 0)
+	outstanding_supply double precision constraint valid_outstanding_supply check (outstanding_supply is null or outstanding_supply > 0),
+	trading_volume double precision constraint valid_trading_volume check (trading_volume is null or trading_volume > 0)
 )
 with (
 	timescaledb.hypertable,
