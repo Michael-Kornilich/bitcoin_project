@@ -176,7 +176,7 @@ def describe_table(
     
         return (
             f"Table summary: {table}\n\n"
-            f"{table_info}\n\n"
+            f"{table_info}\n"
             f"With {enties_count} entiries\n\n"
             f"First & last being:\n"
             f"{first_last}"
