@@ -2,10 +2,16 @@ import psycopg
 from tabulate import tabulate
 from pydantic import validate_call, ConfigDict
 import numpy as np
+import json
 
 validate_call_config = ConfigDict(arbitrary_types_allowed=True)
 
-# prepare for insert function
+with open("/Users/Misha/Documents/python_projects/data_analysis/bitcoin_analysis/secrets/secrets.json") as f:
+    SECRETS = json.load(f)
+
+CONNECTION_STRING = f"postgresql://postgres:{SECRETS["postgres_passcode"]}@localhost/bitcoin_analysis"
+
+
 @validate_call(config=validate_call_config)
 def _prepare_for_insert(
     data:np.ndarray,
@@ -35,6 +41,7 @@ def _prepare_for_insert(
         )
     )
     return insert_values
+
 
 @validate_call(config=validate_call_config)
 def insert_into_db(
@@ -71,7 +78,6 @@ def insert_into_db(
     return
 
 
-# dry insert function
 @validate_call(config=validate_call_config)
 def dry_insert_into_db(
     conn_str:str, 
@@ -116,6 +122,7 @@ def dry_insert_into_db(
         f"Insertion shape is valid."
     )
     return 
+
 
 @validate_call(config=validate_call_config)
 def describe_table(
