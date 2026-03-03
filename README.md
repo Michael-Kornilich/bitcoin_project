@@ -5,8 +5,6 @@ This repository contains the data pipeline and computational framework for a cro
 The empirical findings and economic interpretation are documented in a separate research report.  
 Design documents are provided separately as PDFs.
 
----
-
 ## Structure
 
 ```
@@ -18,7 +16,6 @@ database/      # Schema & SQL utilities
 data_reference.md
 ```
 
----
 
 ## Architecture
 
@@ -41,8 +38,6 @@ Monthly series of:
 
 Used to compute turnover and speculativeness metrics.
 
----
-
 ## Database
 
 - PostgreSQL + TimescaleDB
@@ -52,16 +47,12 @@ Used to compute turnover and speculativeness metrics.
 - Interpolation based on all-time averages
 - Units normalized before storage
 
----
-
 ## Reproducibility
 
 1. Install Python ≥ 3.10 and dependencies  
 2. Configure database  
 3. Add your Postgres passcode in `/secrets/secrets.json`  
 4. Run Phase 1 preprocessing → Run analysis for the phase 1 → Run Phase 2 preprocessing → Run analysis for the phase 2
-
----
 
 ## Scope
 
