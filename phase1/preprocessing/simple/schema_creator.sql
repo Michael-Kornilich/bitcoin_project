@@ -70,12 +70,9 @@ with (
 tablespace "external";
 
 
-create table if not exists oil_ohlc (
+create table if not exists oil_price (
 	dt date primary key,
-	open double precision,
-	high double precision,
-	low double precision,
-	close double precision
+	price double precision
 )
 with (
 	timescaledb.hypertable,
