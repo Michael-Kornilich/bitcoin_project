@@ -1,0 +1,34 @@
+* README.md
+* DATA_REFERENCE.md
+* PROJECT_TREE.md
+* planning
+    * Requirements_planning.pdf
+    * SRS.pdf
+    * DDS/
+        * HDD.pdf
+        * LLD_phase1/
+            * preprocessing.pdf
+            * analysis.pdf
+        * LLD_phase2/
+            * preprocessing.pdf
+            * analysis.pdf
+* phase1/ 
+    * analysis.ipynb
+    * preprocessing/
+        * preprocessing.ipynb
+        * init.ipynb 
+* phase2/
+    * analysis.ipynb
+    * preprocessing/
+        * preprocessing.ipynb
+        * init.ipynb 
+* temp/
+    * <temporary-files>
+* pickles/
+    * <pickeled-objects>
+* logging/
+    * logger.txt
+* secrets/
+    * secrets.json
+* FINAL_REPORT.pdf
+
