@@ -55,7 +55,7 @@ Scope: This document lists the data sources used in the project, structured by P
 
 ### Supply (ETF proxy)
 - iShares Core S&P 500 UCITS ETF (IE00B5BMR087):  
-  https://www.ishares.com/uk/individual/en/products/251882/
+  https://www.ishares.com/uk/individual/en/products/253743/ishares-sp-500-b-ucits-etf-acc-fund
 
 ### Trading Volume (ETF listings)
 - Yahoo Finance (various tickers from listings table + ad-hoc for invalid tickers):  
@@ -65,7 +65,7 @@ Scope: This document lists the data sources used in the project, structured by P
 
 ### Supply (ETF proxy)
 - iShares Nasdaq 100 UCITS ETF (IE00B53SZB19):  
-  https://www.ishares.com/uk/individual/en/products/253741/
+  https://www.ishares.com/uk/individual/en/products/253741/ishares-nasdaq-100-ucits-etf
 
 ### Trading Volume
 - Yahoo Finance (various tickers from listings table):  
@@ -75,7 +75,7 @@ Scope: This document lists the data sources used in the project, structured by P
 
 ### Supply (ETF proxy)
 - iShares Dow Jones Industrial Average UCITS ETF (IE00B53L4350):  
-  https://www.ishares.com/uk/individual/en/products/253743/
+  https://www.ishares.com/uk/individual/en/products/253713/ishares-dow-jones-industrial-average-ucits-etf
 
 ### Trading Volume
 - Yahoo Finance (various tickers from listings table):  
@@ -105,5 +105,5 @@ Scope: This document lists the data sources used in the project, structured by P
 - CME Group Monthly Reports (NYMEX):  
   https://www.cmegroup.com/ftp/webmthly/
 - ICE Futures Europe Statistics:  
-  https://www.ice.com/marketdata/reports/
+  https://ir.theice.com/home/default.aspx
 
