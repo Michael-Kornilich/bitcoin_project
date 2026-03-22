@@ -31,4 +31,6 @@
 * secrets/
     * secrets.json
 * FINAL_REPORT.pdf
+* poetry.lock
+* pyproject.toml
 
