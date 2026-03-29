@@ -1,17 +1,18 @@
 * README.md
 * DATA_REFERENCE.md
 * PROJECT_TREE.md
+* FINAL_REPORT.pdf
 * planning
     * Requirements_planning.pdf
     * SRS.pdf
     * DDS/
         * HDD.pdf
         * LLD_phase1/
-            * preprocessing.pdf
-            * analysis.pdf
+            * phase1_preprocessing.pdf
+            * phase1_analysis.pdf
         * LLD_phase2/
-            * preprocessing.pdf
-            * analysis.pdf
+            * phase2_preprocessing.pdf
+            * phase2_analysis.pdf
 * phase1/ 
     * analysis.ipynb
     * preprocessing/
@@ -26,11 +27,13 @@
     * <temporary-files>
 * pickles/
     * <pickeled-objects>
+* common/
+    * utility.py
+* figures
+    * <figures-used-in-the-report>
 * logging/
-    * logger.txt
 * secrets/
     * secrets.json
-* FINAL_REPORT.pdf
 * poetry.lock
 * pyproject.toml
 
