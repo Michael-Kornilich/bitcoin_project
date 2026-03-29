@@ -1,5 +1,4 @@
-.ipynb_checkpoints
-.DS_Store
-final_report.docx
+**/.*
+*.docx
 ~*
-planning_mutable.zip
+!.gitignore
