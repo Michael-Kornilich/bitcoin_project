@@ -1,21 +1,14 @@
-# Asset Market Structure & Speculativeness Study
+# Asset Market Structure & Trading Intensity Study
 
 This repository contains the data pipeline and computational framework for a cross‑asset market structure analysis.
 
 The empirical findings and economic interpretation are documented in a separate research report.  
 Design documents are provided separately as PDFs.
 
+The results are composed in FINAL_REPORT.pdf
+
 ## Structure
-
-```
-phase1/        # OHLC price construction
-phase2/        # Supply & volume construction
-preprocessing/ # Cleaning & harmonization
-analysis/      # Statistical evaluation
-database/      # Schema & SQL utilities
-data_reference.md
-```
-
+=> PROJECT_TREE.md
 
 ## Architecture
 
@@ -29,14 +22,16 @@ Assets:
 - Crude Oil
 - CPI
 
-Output: normalized time‑series tables in PostgreSQL / TimescaleDB.
+Output: 
+* normalized time‑series tables in PostgreSQL / TimescaleDB.
+* Analysis of different comparative metrics (such as correlation or inflation adjusted returns)
 
 ### Phase 2 — Trading Metadata
 Monthly series of:
 - Outstanding supply (or proxy)
 - Trading volume
 
-Used to compute turnover and speculativeness metrics.
+Used to compute trading intensity.
 
 ## Database
 
@@ -44,15 +39,14 @@ Used to compute turnover and speculativeness metrics.
 - Separate tables for:
   - `*_ohlc`
   - `*_trading_metadata`
-- Interpolation based on all-time averages
-- Units normalized before storage
 
 ## Reproducibility
 
-1. Install Python ≥ 3.10 and dependencies  
-2. Configure database  
-3. Add your Postgres passcode in `/secrets/secrets.json`  
-4. Run Phase 1 preprocessing → Run analysis for the phase 1 → Run Phase 2 preprocessing → Run analysis for the phase 2
+1. Install Python (3.14.4) and poetry (2.3.2)
+2. Install dependencies with `cd the/project/directory` and `poetry install`
+3. Configure database  
+4. Add your Postgres passcode in `/secrets/secrets.json`  
+5. Run Phase 1 preprocessing → Run analysis for the phase 1 → Run Phase 2 preprocessing → Run analysis for the phase 2
 
 ## Scope
 
