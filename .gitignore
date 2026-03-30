@@ -1,4 +1,5 @@
 **/.*
 *.docx
 ~*
+planning_mutable
 !.gitignore
