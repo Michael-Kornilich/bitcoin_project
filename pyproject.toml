@@ -1,7 +1,7 @@
 [project]
-name = "Dependency-monorepo"
+name = "Bitcoin-analysis"
 version = "0.1.0"
-description = "This the shared directory // environment for all data analysis and DS related projects"
+description = "Empirical analysis and comparison of bitcoin to other assets in terms of volatility and trading intensity"
 authors = [
     {name = "Michael Kornilich",email = "molego16@gmail.com"}
 ]
